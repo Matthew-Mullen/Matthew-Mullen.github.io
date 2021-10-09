@@ -3,7 +3,7 @@
 
 AUTHOR = 'Matthew Mullen'
 SITENAME = 'My Cool Site'
-SITEURL = ''
+SITEURL = 'https://Matthew-Mullen.github.io'
 
 PATH = 'content'
 
