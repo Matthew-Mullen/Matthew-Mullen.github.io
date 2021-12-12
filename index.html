@@ -27,6 +27,7 @@
 							<ul>
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
+								<li><a href="#projects">Projects</a></li>
 								
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -41,7 +42,7 @@
 								<h2 class="major">Intro</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 								<p>Computer Science student at the University of Alberta graduating in 2022.</p>
-								<p>Passionate C++ developer and systems programming enthusiast!</p>
+								<p>Incoming Software Engineer at Facebook</p>
 							</article>
 
 						<!-- Work -->
@@ -53,10 +54,23 @@
 							</article>
 
 						<!-- About -->
-							<article id="about">
+							<article id="projects">
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p>You will find featured here links to some of my most recent work below!</p>
+								<script>
+									url = "https://api.github.com/users/Matthew-Mullen/repos"
+									fetch(url)
+									.then(function(response){
+										return response.json();
+									})
+									.then(function(listOfRepos){
+										for(let repo of listOfRepos){
+											console.log(repo);
+										}
+									})
+								</script>
+								
 							</article>
 
 						<!-- Contact -->
