@@ -71,10 +71,11 @@
 											console.log(repo)
 											let paragraph = document.createElement("p");
 											let curTitle = document.createTextNode(repo.name);
-											let curRepoLink = document.createTextNode(repo.git_url);
-											paragraph.appendChild(curTitle);
-											paragraph.appendChild(document.createElement("br"));
+											let curRepoLink = document.createElement("a");
+											curRepoLink.appendChild(curTitle);
+											curRepoLink.href = repo.html_url;
 											paragraph.appendChild(curRepoLink);
+											paragraph.appendChild(document.createElement("br"));
 											div.appendChild(paragraph);
 										}
 
