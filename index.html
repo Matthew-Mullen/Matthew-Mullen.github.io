@@ -58,17 +58,28 @@
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>You will find featured here links to some of my most recent work below!</p>
+								<div id="putgithubstuffhere"></div>
 								<script>
-									url = "https://api.github.com/users/Matthew-Mullen/repos"
+									let url = "https://api.github.com/users/Matthew-Mullen/repos";
+									let div = document.getElementById("putgithubstuffhere");
 									fetch(url)
 									.then(function(response){
 										return response.json();
 									})
 									.then(function(listOfRepos){
 										for(let repo of listOfRepos){
-											console.log(repo);
+											console.log(repo)
+											let paragraph = document.createElement("p");
+											let curTitle = document.createTextNode(repo.name);
+											let curRepoLink = document.createTextNode(repo.git_url);
+											paragraph.appendChild(curTitle);
+											paragraph.appendChild(document.createElement("br"));
+											paragraph.appendChild(curRepoLink);
+											div.appendChild(paragraph);
 										}
-									})
+
+
+									});
 								</script>
 								
 							</article>
