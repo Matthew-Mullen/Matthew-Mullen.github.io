@@ -103,7 +103,33 @@
 								<button id="validate" value="Validate">
 									Validate
 								</button>
+								<script>
+									var button = document.getElementById("validate");
+									button.onclick = function(){
+										var pw = document.getElementById("password").value;
+										pw=parseInt(pw);
+										if(pw===2019){
+											img=document.createElement("img");
+											img.src="https://i.fbcd.co/products/original/vn-jpg-73589643d275c1d73e3f0463ce2980ffead98fcf619af943ed3d5ebba2c3757a.jpg";
+											img.display="block";
+											document.body.appendChild(img); 
+											function wait(ms){
+												var start = new Date().getTime();
+												var end = start;
+												while(end < start + ms) {
+													end = new Date().getTime();
+												}
+											}
+											wait(3000);
+											location.href = "#protectedbearcontent";
+										}
+								}
+								</script>
 
+							</article>
+							<article id="protectedbearcontent">
+								
+								<h2 class="major">Bearville</h2>
 							</article>
 
 						<!-- Contact -->
