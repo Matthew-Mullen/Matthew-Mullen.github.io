@@ -120,7 +120,7 @@
 													end = new Date().getTime();
 												}
 											}
-											wait(3000);
+											//wait(3000);
 											location.href = "#protectedbearcontent";
 										}
 								}
@@ -128,8 +128,13 @@
 
 							</article>
 							<article id="protectedbearcontent">
-								
 								<h2 class="major">Bearville</h2>
+								<script>
+									vnpic=document.getElementById("vnpic");
+									vnpic.src="images/vn"+Math.random(7).toString() + ".jpg";
+
+								</script>
+								<span class="image main"><img id="vnpic" src="images/vn1.jpg" alt="" /></span>
 							</article>
 
 						<!-- Contact -->
