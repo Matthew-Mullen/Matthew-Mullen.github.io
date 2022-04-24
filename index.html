@@ -139,6 +139,11 @@
 									}
 									let src="'images/vn"+ getRandomInt(0,7).toString() + ".jpg'";
 									vnpic.innerHTML = "<img src="+src+ " class='mark'>";
+									var intervalID = setInterval(changeBearPhoto, 3000);
+									function changeBearPhoto(){
+										src = "'images/vn"+ getRandomInt(0,7).toString() + ".jpg'";
+										vnpic.innerHTML = "<img src="+src+ " class='mark'>";
+									}
 								</script>
 								</span>
 								
